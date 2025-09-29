@@ -2,15 +2,11 @@
 # Load PnP module
 Import-Module PnP.PowerShell -Force
 
-# Auth details (placeholders)
-$clientId      = "302efa8b-0b1e-49a4-bb84-324437c9bef9"
-$tenantId      = "a1fe4560-eb54-46b7-bafc-4e94dd69cb03"
-$certPath      = "/Users/pavaoleonardo/Desktop/SharePointAudit/PnPApp.pfx"
-$certPassword  = "Alin@:1982!"
+
 
 # Input CSV and output path
-$csvPath       = "/Users/pavaoleonardo/Desktop/SharePointAudit/SiteUrl.csv"
-$exportPath    = "/Users/pavaoleonardo/Desktop/SharePointAudit/sharepoint-group-audit.csv"
+$csvPath       = "xxxxxxxxx/SiteUrl.csv"
+$exportPath    = "xxxxxxxxxx/sharepoint-group-audit.csv"
 $results       = @()
 
 # Read site URLs
@@ -77,7 +73,3 @@ foreach ($site in $sites) {
 $results | Sort-Object SiteUrl, Role, UserName | Export-Csv -Path $exportPath -NoTypeInformation -Encoding UTF8
 Write-Host "`n✅ Audit complete. Results saved to $exportPath" -ForegroundColor Yellow
 
-# $clientId      = "302efa8b-0b1e-49a4-bb84-324437c9bef9"
-# $tenantId      = "a1fe4560-eb54-46b7-bafc-4e94dd69cb03"
-# $certPath      = "/Users/pavaoleonardo/Desktop/SharePointAudit/PnPApp.pfx"
-# $certPassword  = "Alin@:1982!"
