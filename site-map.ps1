@@ -5,7 +5,7 @@ Import-Module PnP.PowerShell -Force
 # Auth details (placeholders)
 $clientId      = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 $tenantId      = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-$certPath      = "/xxxxxxxxxxx/SharePointAudit/PnPApp.pfx"
+$certPath      = "/xxxxxxxxxxxcert.pfx"
 $certPassword  = "xxxxxxxxxx"
 
 # Input CSV and output path
